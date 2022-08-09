@@ -1,0 +1,6 @@
+<div>
+<%- partial('/partial/front-page') %>
+</div>
+<div class="articles">
+<%- partial('/partial/post-list',{list: site.posts.data, doindex: false, simplemode: false}) %>
+</div>

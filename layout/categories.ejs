@@ -1,0 +1,12 @@
+<div>
+  <p style="font-size:40px;padding:30px;"><%- page.title %></p>
+</div>
+<div class="articles">
+  <% var list=site.categories.data.sort((a,b)=>{
+    return a.name<b.name?-1:1
+  }) %>
+  <% list.forEach((a)=>{ %>
+    <a href="/<%= a.path %>" style="color:#444;"><%= a.name %></a>
+    <%- partial('/partial/post-list',{list: a.posts.data, doindex: false, simplemode: true})%>
+  <% }) %>
+</div>

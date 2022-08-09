@@ -1,0 +1,76 @@
+/*
+* @Author: wdssean
+* @Date:   2022-08-05 16:27:16
+* @Last Modified by:   wdssean
+* @Last Modified time: 2022-08-07 22:59:23
+*/
+*:not(.katex *){
+  font-family: monaco;
+}
+.katex-display{
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+.header{
+  padding: 20px;
+  background: #fff;
+  z-index: 10;
+  position: sticky;
+  top: 0;
+  left: 0;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.body{
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cont{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.footer{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+.articles{
+  width: max(350px,80%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.article{
+  width: 100%;
+  margin: 15px;
+}
+.passage{
+  width: max(350px,80%);
+}
+.menu{
+  box-shadow: 0 0 10px 0 #aaa;
+}
+.card{
+  box-shadow: 0 0 10px 0 #aaa;
+}
+.card>.item:not(:last-of-type){
+  border-bottom: 2px #aaa solid;
+}
+.card>.item{
+  padding: 10px;
+}
+.card>.item.title{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-cont{
+  padding: 20px;
+}

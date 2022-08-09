@@ -1,0 +1,8 @@
+<div>
+  <a href="/" style="color:#444;"><%= config.title %></a>
+</div>
+<div>
+  <% theme.menu.forEach((a)=>{ %>
+  <a href="<%= a.link %>" style="color:#444;margin:2px;"><%= a.name %></a>
+  <% }) %>
+</div>

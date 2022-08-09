@@ -1,0 +1,23 @@
+<% list=list.sort((a,b)=>{return b.date.unix()-a.date.unix()}) %>
+<% var last %>
+<% list.forEach((p)=>{ %>
+<% if(doindex&&last!=p.date.year()){ %>
+<%= last=p.date.year() %>
+<% } %>
+<div class="card article">
+  <div class="item title">
+    <div>
+      <h3><%= p.title %></h3>
+      创建于<%= date(p.date) %>
+    </div>
+    <div>
+      <a href="/<%= p.path %>"><button class="ui button">MORE</button></a>
+    </div>
+  </div>
+  <% if(!simplemode&&p.content){ %>
+  <div class="item">
+    <div style="margin:5px;max-height: 200px;overflow: hidden;"><%- p.content %></div>
+  </div>
+  <% } %>
+</div>
+<% }) %>

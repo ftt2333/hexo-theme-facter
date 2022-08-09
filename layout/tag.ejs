@@ -1,0 +1,9 @@
+<div>
+  <p style="font-size:40px;padding:30px;">Tag: <%= page.tag %></p>
+</div>
+<div class="articles">
+  <% var list=page.posts.data.sort((a,b)=>{
+    return a.name<b.name?-1:1
+  }) %>
+  <%- partial('/partial/post-list',{list:list, doindex: false, simplemode: true})%>
+</div>
