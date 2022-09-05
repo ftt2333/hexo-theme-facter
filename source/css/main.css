@@ -2,7 +2,7 @@
 * @Author: wdssean
 * @Date:   2022-08-05 16:27:16
 * @Last Modified by:   wdssean
-* @Last Modified time: 2022-08-07 22:59:23
+* @Last Modified time: 2022-09-05 11:13:14
 */
 *:not(.katex *){
   font-family: monaco;
@@ -73,4 +73,7 @@
 }
 .footer-cont{
   padding: 20px;
+}
+img{
+  max-width: 100%;
 }
