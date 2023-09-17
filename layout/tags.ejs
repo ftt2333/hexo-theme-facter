@@ -1,0 +1,20 @@
+<div class="ui-col">
+<%- partial('partial/title') %>
+<div class="ui-col-space-big"></div>
+<% 
+  var list = site.tags.data.sort((a, b) => {
+    return a.name < b.name? -1: 1;
+  });
+%>
+<% if(list && list.length){ %>
+<div class="ui-card ui-shadow">
+  <div class="ui-padding">
+    <% list.forEach((a) => { %>
+    <a href="/<%= a.path %>" style="margin: 10px; padding: 5px;">
+      <%= a.name %>
+    </a>
+    <% }); %>
+  </div>
+  <% } %>
+</div>
+</div>

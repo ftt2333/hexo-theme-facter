@@ -1,0 +1,36 @@
+<div class="ui-col">
+  <%
+  list = list.sort((a, b) => {
+    return b.date.unix() - a.date.unix();
+  });
+  %>
+  <% list.forEach((p) => { %>
+  <div class="ui-full-width ui-card ui-shadow">
+    <div class="ui-row ui-space-between ui-padding">
+      <div>
+        <h3><%= p.title %></h3>
+        创建于<%= date(p.date) %>
+      </div>
+      <div>
+        <a href="/<%= p.path %>" style="padding: 10px;">
+          MORE...
+        </a>
+      </div>
+    </div>
+    <% if (!simple_mode && p.excerpt != "") { %>
+    <div class="ui-col-line"></div>
+    <div class="ui-padding">
+      <%- p.excerpt %>
+    </div>
+    <%}%>
+  </div>
+  <% if (simple_mode) { %>
+  <div class="ui-col-space-mid"></div>
+  <% } else { %>
+  <div class="ui-col-space-big"></div>
+  <% } %>
+  <% }) %>
+  <% if (jump) { %>
+    <%- partial('partial/jump.ejs') %>
+  <% } %>
+</div>

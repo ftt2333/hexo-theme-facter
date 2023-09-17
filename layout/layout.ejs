@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+  <title><%= config.title %></title>
+  <link rel="icon" href="<%=  config.favicon %>">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fomantic-ui/2.9.2/semantic.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fomantic-ui/2.9.2/semantic.min.js"></script>
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/prism.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.3/katex.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/4.0.0/github-markdown.min.css">
+  <script src="/js/main.js"></script>
+</head>
+
+<body style="height: max-content;" class="ui-col">
+  <div id="dark-mode" onclick="dark_mode()">
+    🌓
+  </div>
+  <div class="ui-header ui-shadow" style="transition: all 0.3s ease; padding: 20px; background: var(--header-bgcol); z-index: 10; height: 60px; width: 100%;">
+    <%- partial('/partial/header') %>
+  </div>
+  <div class="ui-col-space-big"></div>
+  <div class="ui-col" style="height: max-content;">
+    <div class="ui-content">
+      <%- body %>
+    </div>
+    <div class="ui-col-space-mid"></div>
+    <div>
+      <%- partial('/partial/footer') %>
+    </div>
+    <div class="ui-col-space-mid"></div>
+  </div>
+</body>
+
+</html>

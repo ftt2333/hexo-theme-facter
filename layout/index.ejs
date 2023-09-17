@@ -1,0 +1,13 @@
+<div class="ui-col">
+  <%- partial('/partial/front-page') %>
+  <div class="ui-col-space-big"></div>
+  <%-
+  partial('/partial/post-list', {
+    'list': page.posts.data, 
+    'index': false, 
+    'simple_mode': false, 
+    'top': -1,
+    'jump': true
+  }); 
+  %>
+</div>

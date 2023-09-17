@@ -1,0 +1,15 @@
+<div class="ui-row ui-space-around ui-full-width">
+  <% if (page.prev) { %>
+    <a href="/<%=page.prev_link%>" class="ui-card ui-shadow ui-center ui-padding-big" style="flex: auto;">
+      PREV
+    </a>
+  <% } %>
+  <% if (page.next && page.prev) { %>
+    <div class="ui-row-space-mid"></div>
+  <% } %>
+  <% if (page.next) { %>
+    <a href="/<%=page.next_link%>" class="ui-card ui-shadow ui-center ui-padding-big" style="flex: auto;">
+      NEXT
+    </a>
+  <% } %>
+</div>

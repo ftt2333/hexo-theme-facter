@@ -1,0 +1,37 @@
+<div id="comment" style="margin: auto;"></div>
+<% if(theme.twikoo && theme.twikoo.enable) { %>
+<script src="https://cdn.staticfile.org/twikoo/1.6.7/twikoo.all.min.js"></script>
+<script>
+  twikoo.init({
+    envId: '<%= theme.twikoo.envId %>',
+    el: '#comment'
+  });
+</script>
+<% } %>
+<% if(theme.valine && theme.valine.enable) { %>
+<script src='https://unpkg.com/valine/dist/Valine.min.js'></script>
+<script>
+  new Valine({
+    serverURLs: '<%= theme.valine.serverURL %>',
+    appId: '<%= theme.valine.appID %>',
+    appKey: '<%= theme.valine.appKey %>',
+    el: '#comment'
+  });
+</script>
+<% } %>
+
+<% if(theme.waline && theme.waline.enable) { %>
+<script src="https://unpkg.com/@waline/client@v2/dist/waline.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css">
+<script>
+  Waline.init({
+    serverURLs: '<%= theme.waline.serverURL %>',
+    el: '#comment'
+  });
+</script>
+<% } %>
+
+<% if(theme.cusdis && theme.cusdis.enable) { %>
+<div style="overflow: hidden;" id="cusdis_thread" data-host="https://cusdis.com" data-app-id="<%= theme.cusdis.appId %>" data-page-id="<%= page._id %>" data-page-url="<%= page.path %>" data-page-title="<%= page.title %>"></div>
+<script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
+<% } %>

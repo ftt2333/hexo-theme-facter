@@ -1,0 +1,13 @@
+<div class="ui-row ui-space-between">
+  <div>
+    <a href="/" style="color: var(--header-col);"><%= config.title %></a>
+  </div>
+  <div class="ui-row">
+    <% theme.menu.forEach((a) => { %>
+    <div class="ui-row-space"></div>
+    <a href="<%= a.link %>" style="color: var(--header-col); margin: 2px;">
+      <%= a.name %>
+    </a>
+    <% }); %>
+  </div>
+</div>

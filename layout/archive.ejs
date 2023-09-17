@@ -1,0 +1,32 @@
+<div class="ui-col ui-full">
+  <div class="ui-card ui-shadow" style="font-size: 40px; padding: 20px 80px;">
+    <p style=" color: var(--title-col);">Archives</p>
+  </div>
+  <div class="ui-col-space-big"></div>
+  <%
+  let list = site.posts.data.sort((a, b) => {
+    return b.date.unix() - a.date.unix();
+  });
+  let cur = [];
+  %>
+  <% function show(list) {%>
+  <div class="ui-card ui-padding-big ui-full-width ui-shadow">
+    <div class="ui-center ui-padding">
+      <p style="color: var(--title-col); font-size: 18px;"><%= cur[0].date.year() %></p>
+    </div>
+    <div class="ui-col-space"></div>
+    <%- partial('/partial/post-list', {'list': cur, 'index': false, 'simple_mode': true, 'top': -1, 'jump': false}) %>
+  </div>
+  <div class="ui-col-space-big"></div>
+  <% } %>
+  <% 
+    list.forEach((a) => {
+      if (!cur.length || a.date.year() == cur[0].date.year()) cur.push(a);
+      else {
+        show(cur); 
+        cur = [a];
+      }
+    });
+    if (cur != []) show(cur); 
+  %>
+</div>
