@@ -1,10 +1,10 @@
 ## 示例站点
-[Ftt2333's Blog](https://ftt2333.gitlab.io)
+[Ftt2333's Blog](https://ftt2333.github.io)
 
 ## 配置
 貌似没啥好说的
 ```yml
-title: Welcome to Ftt2333's Blog
+title: Ftt2333's Nest
 menu: 
   - name: Archives 
     link: /archives/
