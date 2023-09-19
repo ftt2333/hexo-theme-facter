@@ -6,34 +6,50 @@
   <meta name="viewport" content="width = device-width, initial-scale = 1.0">
   <title><%= config.title %></title>
   <link rel="icon" href="<%=  config.favicon %>">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fomantic-ui/2.9.2/semantic.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/fomantic-ui/2.9.2/semantic.min.js"></script>
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.bootcdn.net/ajax/libs/fomantic-ui/2.9.3/semantic.css">
+  <script src="https://cdn.bootcdn.net/ajax/libs/fomantic-ui/2.9.3/semantic.min.js"></script>
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="stylesheet" href="/css/prism.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.3/katex.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/4.0.0/github-markdown.min.css">
+  <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/prism-themes/1.9.0/prism-vsc-dark-plus.min.css">
+  <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/KaTeX/0.16.8/katex.min.css">
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery.pjax/2.0.1/jquery.pjax.min.js"></script>
+  <link href="https://cdn.bootcdn.net/ajax/libs/aplayer/1.10.1/APlayer.min.css" rel="stylesheet">
+  <script src="https://cdn.bootcdn.net/ajax/libs/aplayer/1.10.1/APlayer.min.js"></script>
   <script src="/js/main.js"></script>
 </head>
 
-<body style="height: max-content;" class="ui-col">
-  <div id="dark-mode" onclick="dark_mode()">
-    🌓
-  </div>
-  <div class="ui-header ui-shadow" style="transition: all 0.3s ease; padding: 20px; background: var(--header-bgcol); z-index: 10; height: 60px; width: 100%;">
-    <%- partial('/partial/header') %>
-  </div>
-  <div class="ui-col-space-big"></div>
-  <div class="ui-col" style="height: max-content;">
-    <div class="ui-content">
-      <%- body %>
+<body>
+  <div id="page-content" class="ui-col">
+    <div id="dark-mode" onclick="dark_mode()">🌓</div>
+    <div class="ui-header ui-shadow" style="transition: all 0.3s ease; padding: 20px; background: var(--header-bgcol); z-index: 10; height: 60px; width: 100%;">
+      <%- partial('/partial/header') %>
     </div>
-    <div class="ui-col-space-mid"></div>
-    <div>
-      <%- partial('/partial/footer') %>
+    <div class="ui-col-space-big"></div>
+    <div class="ui-col" style="height: max-content;">
+      <div class="ui-content">
+        <%- body %>
+      </div>
+      <div class="ui-col-space-mid"></div>
+      <div>
+        <%- partial('/partial/footer') %>
+      </div>
+      <div class="ui-col-space-mid"></div>
     </div>
-    <div class="ui-col-space-mid"></div>
   </div>
+  <div id="aplayer-content"></div>
+  <script>
+    $(document).pjax('a[target!=_blank]', '#page-content', {fragment: '#page-content'});
+    const ap = new APlayer({
+      container: document.getElementById('aplayer-content'),
+      fixed: true,
+      audio: [{
+        name: '3300sbt',
+        artist: 'Enucai',
+        url: '/music/wsy3300sb.mp3',
+        cover: 'https://enucai.github.io/images/avatar.jpeg',
+      }]
+    });
+  </script>
 </body>
 
 </html>
