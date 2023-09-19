@@ -1,6 +1,6 @@
 <div id="comment" style="margin: auto;"></div>
 <% if(theme.twikoo && theme.twikoo.enable) { %>
-<script src="https://cdn.staticfile.org/twikoo/1.6.7/twikoo.all.min.js"></script>
+<script src="https://cdn.staticfile.org/twikoo/1.6.21/twikoo.all.min.js"></script>
 <script>
   twikoo.init({
     envId: '<%= theme.twikoo.envId %>',
@@ -29,6 +29,17 @@
     el: '#comment'
   });
 </script>
+<% } %>
+
+<% if(theme.changyan && theme.changyan.enable) { %>
+<div id="SOHUCS" sid="<%= page.path %>"></div>
+  <script charset="utf-8" type="text/javascript" src="https://cy-cdn.kuaizhan.com/upload/changyan.js"></script>
+  <script type="text/javascript">
+    window.changyan.api.config({
+    appid: '<%= theme.changyan.appId %>',
+    conf: '<%= theme.changyan.conf %>'
+    });
+  </script>
 <% } %>
 
 <% if(theme.cusdis && theme.cusdis.enable) { %>

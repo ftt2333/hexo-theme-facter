@@ -8,7 +8,7 @@ menu:
     link: /tags/
 twikoo:
   enable: false
-  envId: https://twikoo-one-bice.vercel.app/
+  envId: https://twikoo.netlify.app/
 valine:
   enable: false
   serverURL: https://p8sdao2e.api.lncldglobal.com
@@ -20,3 +20,7 @@ waline:
 cusdis:
   enable: false
   appId: 820d338c-bf94-43ff-bed9-abc1a00b6cf1
+changyan:
+  enable: false
+  appId: cywST4ykv
+  conf: prod_67b4a42514e189ad97b4ef392b35a67e

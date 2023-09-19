@@ -22,3 +22,11 @@ $(document)
   $('.ui.accordion').accordion()
   $('.ui.dropdown').dropdown({on: 'click'})
 })
+
+window.addEventListener('hexo-blog-decrypt', () => {
+  $(document)
+  .ready(function() {
+    $('.ui.accordion').accordion()
+    $('.ui.dropdown').dropdown({on: 'click'})
+  })
+})
