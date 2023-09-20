@@ -9,11 +9,9 @@ $(() => {
     return res.json()
   }).then((res) => {
     $('#yiyan-content').text(`${res.hitokoto}`)
-    let from = res.from, from_who = res.from_who
+    let from_who = res.from_who
     let s = ''
-    if (from && from_who) s = `-- ${from_who} ${from}`
-    else if (!from && from_who) s = `-- ${from_who}`
-    else if (from && !from_who) s = `-- ${from}`
+    if (from_who) s = `-- ${from_who}`
     $('#yiyan-from').html(s)
   })
 })
