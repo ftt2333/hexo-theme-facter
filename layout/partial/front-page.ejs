@@ -1,3 +1,20 @@
-<div class="ui-card ui-shadow" style="font-size: 40px; padding: 20px 80px; max-width: max(350px, 70%);">
-  <p style=" color: var(--title-col);"><%- theme.title %></p>
+<div class="ui-card ui-shadow" style="padding: 20px 80px;">
+  <p style=" color: var(--title-col); margin: 10px; font-size: 40px; text-align: center;"><%- theme.title %></p>
+  <p style="text-align: center; margin: 0; padding: 0;" id="yiyan-content"></p>
+  <p style="text-align: right; margin: 0; padding: 0;" id="yiyan-from"></p>
 </div>
+<script>
+$(() => {
+  fetch('https://v1.hitokoto.cn').then((res) => {
+    return res.json()
+  }).then((res) => {
+    $('#yiyan-content').text(`${res.hitokoto}`)
+    let from = res.from, from_who = res.from_who
+    let s = ''
+    if (from && from_who) s = `-- ${from_who} ${from}`
+    else if (!from && from_who) s = `-- ${from_who}`
+    else if (from && !from_who) s = `-- ${from}`
+    $('#yiyan-from').html(s)
+  })
+})
+</script>
