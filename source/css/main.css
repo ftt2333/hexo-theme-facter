@@ -230,3 +230,7 @@ body {
   user-select: none;
   z-index: 114514;
 }
+
+.ui.dropdown > .menu {
+  border-radius: 0;
+}

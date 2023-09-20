@@ -17,14 +17,14 @@
 </head>
 
 <body>
-  <div id="page-content" class="ui-col">
+  <div class="ui-col">
     <div id="dark-mode" onclick="dark_mode()">🌓</div>
     <div class="ui-header ui-shadow" style="transition: all 0.3s ease; padding: 20px; background: var(--header-bgcol); z-index: 10; height: 60px; width: 100%;">
       <%- partial('/partial/header') %>
     </div>
     <div class="ui-col-space-big"></div>
     <div class="ui-col" style="height: max-content;">
-      <div class="ui-content">
+      <div class="ui-content" id="page-content">
         <%- body %>
       </div>
       <div class="ui-col-space-mid"></div>

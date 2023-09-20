@@ -29,6 +29,14 @@ $(document)
 .ready(function() {
   $('.ui.accordion').accordion()
   $('.ui.dropdown').dropdown({on: 'click'})
+  if (is_dark_mode == "dark") {
+    $(".ui.dropdown").addClass('inverted')
+    $(".ui.dropdown>.menu").addClass('inverted')
+  }
+  else {
+    $(".ui.dropdown").removeClass('inverted')
+    $(".ui.dropdown>.menu").removeClass('inverted')
+  }
 })
 
 window.addEventListener('hexo-blog-decrypt', () => {
