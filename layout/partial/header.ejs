@@ -8,9 +8,15 @@
     <% if (!a.link) { %>
       <div class="ui dropdown scrolling">
         <div style="color: var(--title-col);"><%= a.name %><i class="dropdown icon"></i></div>
-        <div class="menu">
+        <div class="menu" style="width: max-content;">
           <% a.links.forEach((b) => { %>
-            <a class="item" href="<%= b.link %>"><%= b.name %></a>
+            <a class="item" href="<%= b.link %>" style="min-width: max-content; text-align: right; display: flex;">
+              <% if (b.avatar) { %>
+                <img class="image" src="<%= b.avatar %>">
+              <% } %>
+              <div style="flex: 1;"></div>
+              <%= b.name %>
+            </a>
           <% }) %>
         </div>
       </div>

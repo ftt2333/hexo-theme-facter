@@ -28,7 +28,7 @@ if (x == "dark") dark_mode();
 $(document)
 .ready(function() {
   $('.ui.accordion').accordion()
-  $('.ui.dropdown').dropdown({on: 'click'})
+  $('.ui.dropdown').dropdown({on: 'click', action: 'nothing'})
   if (is_dark_mode == "dark") {
     $(".ui.dropdown").addClass('inverted')
     $(".ui.dropdown>.menu").addClass('inverted')
@@ -43,6 +43,6 @@ window.addEventListener('hexo-blog-decrypt', () => {
   $(document)
   .ready(function() {
     $('.ui.accordion').accordion()
-    $('.ui.dropdown').dropdown({on: 'click'})
+    $('.ui.dropdown').dropdown({on: 'click', action: 'nothing'})
   })
 })

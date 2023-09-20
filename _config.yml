@@ -4,12 +4,16 @@ menu:
     links:
       - name: Enucai
         link: https://enucai.github.io/
+        avatar: https://cdn.luogu.com.cn/upload/usericon/169574.png
       - name: Cmk666
         link: https://cmk666.github.io/
+        avatar: https://cdn.luogu.com.cn/upload/usericon/127949.png
       - name: Cyb1010
         link: https://cyb1010.github.io/
+        avatar: https://cdn.luogu.com.cn/upload/usericon/333119.png
       - name: Rbtree
         link: https://red-black-tree.github.io/
+        avatar: https://cdn.luogu.com.cn/upload/usericon/173951.png
   - name: Archives 
     link: /archives/
   - name: Categories 
