@@ -1,5 +1,15 @@
 title: Ftt2333's Nest
 menu: 
+  - name: Friends
+    links:
+      - name: Enucai
+        link: https://enucai.github.io/
+      - name: Cmk666
+        link: https://cmk666.github.io/
+      - name: Cyb1010
+        link: https://cyb1010.github.io/
+      - name: Rbtree
+        link: https://red-black-tree.github.io/
   - name: Archives 
     link: /archives/
   - name: Categories 

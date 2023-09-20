@@ -11,6 +11,14 @@ function dark_mode() {
   });
   is_dark_mode = (is_dark_mode == "light" ? "dark" : "light");
   localStorage.setItem("dark-mode", is_dark_mode);
+  if (is_dark_mode == "dark") {
+    $(".ui.dropdown").addClass('inverted')
+    $(".ui.dropdown>.menu").addClass('inverted')
+  }
+  else {
+    $(".ui.dropdown").removeClass('inverted')
+    $(".ui.dropdown>.menu").removeClass('inverted')
+  }
 }
 
 let x = localStorage.getItem("dark-mode");

@@ -5,9 +5,19 @@
   <div class="ui-row">
     <% theme.menu.forEach((a) => { %>
     <div class="ui-row-space"></div>
-    <a href="<%= a.link %>" style="color: var(--header-col); margin: 2px;">
-      <%= a.name %>
-    </a>
-    <% }); %>
+    <% if (!a.link) { %>
+      <div class="ui dropdown scrolling">
+        <div style="color: var(--title-col);"><%= a.name %><i class="dropdown icon"></i></div>
+        <div class="menu">
+          <% a.links.forEach((b) => { %>
+            <a class="item" href="<%= b.link %>"><%= b.name %></a>
+          <% }) %>
+        </div>
+      </div>
+    <% } else { %>
+      <a href="<%= a.link %>" style="color: var(--header-col); margin: 2px;">
+        <%= a.name %>
+      </a>
+    <% }}) %>
   </div>
 </div>
