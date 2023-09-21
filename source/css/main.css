@@ -191,6 +191,11 @@ iframe {
 
 body {
   background-color: var(--background-col);
+/*  background-position: bottom;*/
+/*  background-image: url(https://www.loliapi.com/acg/pe/);*/
+/*  background-attachment: fixed;*/
+/*  background-size: cover;*/
+/*  background-repeat: no-repeat;*/
 }
 
 #dark-mode {
