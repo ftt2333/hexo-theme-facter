@@ -9,8 +9,7 @@ let plugin_list = [
   'markdown-it-footnote',
   'markdown-it-ins',
   'markdown-it-mark',
-  '@iktakahiro/markdown-it-katex',
-  // 'markdown-it-toc-and-anchor'
+  '@iktakahiro/markdown-it-katex'
 ]
 
 for (let i in plugin_list) {

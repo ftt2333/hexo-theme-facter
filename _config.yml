@@ -1,6 +1,6 @@
 title: Ftt2333's Nest
 menu: 
-  - name: Friends
+  - name: 友链
     links:
       - name: Enucai
         link: https://enucai.github.io/
@@ -14,11 +14,11 @@ menu:
       - name: Rbtree
         link: https://red-black-tree.github.io/
         avatar: https://cdn.luogu.com.cn/upload/usericon/173951.png
-  - name: Archives 
+  - name: 归档 
     link: /archives/
-  - name: Categories 
+  - name: 分类 
     link: /categories/
-  - name: Tags
+  - name: 标签
     link: /tags/
 twikoo:
   enable: false
