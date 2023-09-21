@@ -30,7 +30,7 @@ if (x == 'dark') dark_mode();
 let init = () => {
   $('.ui.accordion').accordion()
   $('.ui.dropdown').dropdown({on: 'click', action: 'nothing'})
-  $('table').addClass('ui celled table collapsing')
+  $('table').addClass('ui celled table unstackable')
   dark_mode_class()
 }
 
