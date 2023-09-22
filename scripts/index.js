@@ -40,7 +40,7 @@ hexo.extend.tag.register('folding', (data, cont) => {
         <i class="dropdown icon"></i>
         ` + title + `
       </div>
-      <div class="` + (active ? 'active' : '') + ` content">
+      <div class="` + (active ? 'active' : '') + ` content border">
         <p>` + content + `</p>
       </div>
     </div>

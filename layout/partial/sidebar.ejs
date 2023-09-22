@@ -1,0 +1,34 @@
+<script>
+  let sidebar_mobile = `<i class="close icon"></i><div class="ui header"><%= config.title %></div>`
+  let sidebar_pc = `<i class="close icon"></i><div class="ui header"><%= config.title %></div>`
+  sidebar_mobile += 
+  `<% theme.menu.forEach((a) => { %>
+    <% if (!a.link) { %>
+      <div class="ui accordion item">
+        <div class="title" style="padding: 0;">
+          <%= a.name %>
+          <i class="dropdown icon"></i>
+        </div>
+        <div class="content">
+          <div></div>
+          <% a.links.forEach((b) => { %>
+            <a class="item" href="<%= b.link %>" style="display: flex !important;">
+              <% if (b.avatar) { %>
+                <img class="image" src="<%= b.avatar %>">
+              <% } %>
+              <div style="flex: 1;"></div>
+              <div><%= b.name %></div>
+            </a>
+          <% }) %>
+        </div>
+      </div>
+    <% } else { %>
+      <a class="item" href="<%= a.link %>">
+        <%= a.name %>
+      </a>
+    <% }}) %>`
+  $(() => {
+    $('#sidebar').html(sidebar_mobile)
+    init()
+  })
+</script>
