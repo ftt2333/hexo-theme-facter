@@ -1,4 +1,4 @@
-var md = require('markdown-it')()
+var md = require('markdown-it')({ html: true })
 
 let plugin_list = [
   'markdown-it-emoji',
@@ -34,16 +34,15 @@ hexo.extend.tag.register('folding', (data, cont) => {
   if (data.length > 0) title = data[0]
   let active = false
   if (data.length > 1) active = data[1]
-  return `
-    <div class="ui accordion">
-      <div class="` + (active ? 'active' : '') + ` title">
-        <i class="dropdown icon"></i>
-        ` + title + `
-      </div>
-      <div class="` + (active ? 'active' : '') + ` content border">
-        <p>` + content + `</p>
-      </div>
-    </div>
-  `
-
+  let tmp = active ? 'active' : ''
+  return `<div class="ui accordion">
+  <div class="` + (active ? 'active' : '') + ` title">
+    <i class="dropdown icon"></i>
+    ` + title + `
+  </div><div class="` + (active ? 'active' : '') + ` content border">
+  <p>
+    ` + content + `
+  </p>
+  </div>
+</div>`
 }, { ends: true })

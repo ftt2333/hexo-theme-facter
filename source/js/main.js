@@ -38,7 +38,7 @@ if (!x) x = 'light', localStorage.setItem('dark-mode', x);
 if (x == 'dark') dark_mode();
 
 let init = () => {
-  $('.ui.accordion').accordion()
+  $('.ui.accordion:not(.ui.accordion *)').accordion()
   $('.ui.dropdown').dropdown({on: 'click', action: 'nothing'})
   $('table').addClass('ui celled table unstackable')
   dark_mode_class()
