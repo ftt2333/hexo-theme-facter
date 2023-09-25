@@ -6,7 +6,8 @@
   --code-bgcol: rgba(34, 34, 34, 1);
   --font-col: #010101;
   --title-col: #444;
-  --background-img: url(https://s2.loli.net/2022/12/01/UwoNXvM1HYJTWK6.jpg);
+/*  --background-img: url(https://s2.loli.net/2022/12/01/UwoNXvM1HYJTWK6.jpg);*/
+  --background-img: url(https://www.loliapi.com/acg/);
   --dark-mode-bgcol: #100f2c;
   --background-col: #eaeaea;
   --footer-col: #010101;
@@ -59,11 +60,19 @@ blockquote {
   font-family: myFont;
 }
 
-#body {
+body {
   background-color: var(--background-col) !important;
+  background-position: center !important;
+  background-attachment: fixed !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+}
+
+#body {
+/*  background-color: var(--background-col) !important;*/
   min-height: 100%;
   background-position: center !important;
-/*  background-image: var(--background-img) !important;*/
+  background-image: var(--background-img) !important;
   background-attachment: fixed !important;
   background-size: cover !important;
   background-repeat: no-repeat !important;
